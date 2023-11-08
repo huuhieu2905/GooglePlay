@@ -7,4 +7,7 @@
     <color name="white1">#FFCCCCCC</color>
     <color name="teal_700">#FF018786</color>
     <color name="red">#CD5C5C</color>
+    <color name="blue">#33FFFF</color>
+    <color name="gray">#C6E2FF</color>
+    <color name="FloralWhite">#FFFAF0</color>
 </resources>

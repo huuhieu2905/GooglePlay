@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/FloralWhite"
     tools:context=".MainActivity">
 
     <ScrollView
         android:id = "@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/FloralWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,30 +19,49 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/search_view"
-                android:layout_width="0dp"
+            <LinearLayout
+                android:id ="@+id/first"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:layout_margin="8dp"
-                app:queryHint="Search Apps ....."
-                app:iconifiedByDefault="false"
-                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/text">
-            </androidx.appcompat.widget.SearchView>
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/text"
+                tools:layout_editor_absoluteY="11dp">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search_view"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@color/white1"
+                    app:iconifiedByDefault="false"
+                    app:queryHint="Search Apps .....">
+
+                </androidx.appcompat.widget.SearchView>
+
+                <ImageView
+                    android:id="@+id/reminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/reminder"
+                    android:background="@color/FloralWhite"
+                    android:layout_marginRight="0dp"/>
+
+            </LinearLayout>
+
             <HorizontalScrollView
                 android:id="@+id/text"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/white1"
+                android:background="@color/FloralWhite"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/search_view" >
+                app:layout_constraintTop_toBottomOf="@id/first" >
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
@@ -61,7 +82,7 @@
                             android:layout_width="140dp"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="10dp"
-                            android:text="For You"
+                            android:text="Your App"
                             android:textAlignment="center"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -71,7 +92,7 @@
                             android:layout_width="140dp"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="10dp"
-                            android:text="Top Charts"
+                            android:text="Trending"
                             android:textAlignment="center"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -105,6 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
                 android:layout_marginTop="10dp"
+                android:background="@color/FloralWhite"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -125,7 +147,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <LinearLayout
-                            android:id="@+id/fb"
+                            android:id="@+id/shopee"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="10dp"
@@ -134,47 +156,44 @@
                             <ImageButton
                                 android:layout_width="140dp"
                                 android:layout_height="160dp"
-                                android:background="@color/white"
+                                android:background="@color/FloralWhite"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/fb" />
+                                android:src="@drawable/shopee" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Facebook"
-                                android:textAlignment="center"
+                                android:text="Shopee"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="4.1★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:text="4.9★"
+                                android:textSize="20sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/messenger"
+                            android:id="@+id/grab"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/FloralWhite"
                             android:layout_marginEnd="10dp"
                             android:orientation="vertical">
 
                             <ImageButton
                                 android:layout_width="140dp"
                                 android:layout_height="160dp"
-                                android:background="@color/white"
+                                android:background="@color/FloralWhite"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/messenger" />
+                                android:src="@drawable/grab" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Messenger"
-                                android:textAlignment="center"
+                                android:text="Grab"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -182,31 +201,29 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="4.3★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:textSize="20sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/insta"
+                            android:id="@+id/gojek"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/FloralWhite"
                             android:layout_marginEnd="10dp"
                             android:orientation="vertical">
 
                             <ImageButton
                                 android:layout_width="140dp"
                                 android:layout_height="160dp"
-                                android:background="@color/white"
+                                android:background="@color/FloralWhite"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/insta" />
+                                android:src="@drawable/gojek" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Instagram"
-                                android:textAlignment="center"
+                                android:text="Gojek"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -214,14 +231,12 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="4.0★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:textSize="20sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/youtube"
+                            android:id="@+id/baemin"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="10dp"
@@ -230,30 +245,27 @@
                             <ImageButton
                                 android:layout_width="140dp"
                                 android:layout_height="160dp"
-                                android:background="@color/white"
+                                android:background="@color/FloralWhite"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/youtube" />
+                                android:src="@drawable/baemin" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Youtube"
-                                android:textAlignment="center"
+                                android:text="Baemin"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="4.5★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:text="4.2★"
+                                android:textSize="20sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/tiktok"
+                            android:id="@+id/shopeefood"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="10dp"
@@ -263,25 +275,22 @@
                                 android:layout_width="140dp"
                                 android:layout_height="160dp"
                                 android:layout_marginEnd="100dp"
-                                android:background="@color/white"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/tiktok" />
+                                android:background="@color/FloralWhite"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/shopeefood" />
 
                             <TextView
                                 android:layout_width="140dp"
                                 android:layout_height="wrap_content"
-                                android:text="Tiktok"
-                                android:textAlignment="center"
+                                android:text="ShopeeFood"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="140dp"
                                 android:layout_height="wrap_content"
-                                android:text="4.2★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:text="4.7★"
+                                android:textSize="20sp" />
 
                         </LinearLayout>
                     </TableRow>
@@ -293,7 +302,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Popular App"
+                android:text="Education"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -302,7 +311,7 @@
                 app:layout_constraintTop_toBottomOf="@id/app1" />
 
             <HorizontalScrollView
-                android:id="@+id/popularapp"
+                android:id="@+id/educationapp"
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
                 android:layout_marginTop="10dp"
@@ -326,7 +335,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <LinearLayout
-                            android:id="@+id/gmail"
+                            android:id="@+id/coursera"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="10dp"
@@ -335,30 +344,27 @@
                             <ImageButton
                                 android:layout_width="140dp"
                                 android:layout_height="160dp"
-                                android:background="@color/white"
+                                android:background="@color/FloralWhite"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/gmail" />
+                                android:src="@drawable/coursera" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Gmail"
-                                android:textAlignment="center"
+                                android:text="Coursera"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="4.0★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:text="4.7★"
+                                android:textSize="20sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/keep"
+                            android:id="@+id/udemy"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="10dp"
@@ -367,30 +373,27 @@
                             <ImageButton
                                 android:layout_width="140dp"
                                 android:layout_height="160dp"
-                                android:background="@color/white"
+                                android:background="@color/FloralWhite"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/keep" />
+                                android:src="@drawable/udemy" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Google Keep"
-                                android:textAlignment="center"
+                                android:text="Udemy"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="4.3★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:text="4.5★"
+                                android:textSize="20sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/meet"
+                            android:id="@+id/reddit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="10dp"
@@ -399,25 +402,22 @@
                             <ImageButton
                                 android:layout_width="140dp"
                                 android:layout_height="160dp"
-                                android:background="@color/white"
+                                android:background="@color/FloralWhite"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/meet" />
+                                android:src="@drawable/reddit" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Google Meet"
-                                android:textAlignment="center"
+                                android:text="Reddit"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="3.9★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:text="4.5★"
+                                android:textSize="20sp" />
 
                         </LinearLayout>
 
@@ -439,7 +439,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Teams"
-                                android:textAlignment="center"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -447,84 +446,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="4.5★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:textSize="20sp" />
 
                         </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/zoom"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginEnd="10dp"
-                            android:orientation="vertical">
-
-                            <ImageButton
-                                android:layout_width="140dp"
-                                android:layout_height="160dp"
-                                android:layout_marginEnd="100dp"
-                                android:background="@color/white"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/zoom" />
-
-                            <TextView
-                                android:layout_width="140dp"
-                                android:layout_height="wrap_content"
-                                android:text="Zoom"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="140dp"
-                                android:layout_height="wrap_content"
-                                android:text="3.8★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-                    </TableRow>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
-
-            <TextView
-                android:id="@+id/hot_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Hot App"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/popularapp" />
-
-            <HorizontalScrollView
-                android:id="@+id/hotapp"
-                android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/hot_text"
-                app:layout_constraintVertical_bias="0.0">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-
-                    <TableRow
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
 
                         <LinearLayout
                             android:id="@+id/github"
@@ -536,15 +460,86 @@
                             <ImageButton
                                 android:layout_width="140dp"
                                 android:layout_height="160dp"
-                                android:background="@color/white"
+                                android:layout_marginEnd="100dp"
+                                android:background="@color/FloralWhite"
                                 android:scaleType="centerInside"
                                 android:src="@drawable/github" />
 
                             <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:text="Github"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:text="4.8★"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+                    </TableRow>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/entertainment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Entertainment"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/educationapp" />
+
+            <HorizontalScrollView
+                android:id="@+id/hotapp"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/entertainment_text"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/FloralWhite"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/spotify"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/FloralWhite"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:layout_width="140dp"
+                                android:layout_height="160dp"
+                                android:background="@color/FloralWhite"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/spotify" />
+
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="GitHub"
-                                android:textAlignment="center"
+                                android:text="Spotify"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -552,14 +547,12 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="4.7★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:textSize="20sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/notion"
+                            android:id="@+id/zing"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="10dp"
@@ -570,13 +563,12 @@
                                 android:layout_height="160dp"
                                 android:background="@color/white"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/notion" />
+                                android:src="@drawable/zing" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Notion"
-                                android:textAlignment="center"
+                                android:text="Zing MP3"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -584,14 +576,12 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="4.5★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:textSize="20sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/outlook"
+                            android:id="@+id/youtube"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="10dp"
@@ -602,13 +592,12 @@
                                 android:layout_height="160dp"
                                 android:background="@color/white"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/outlook" />
+                                android:src="@drawable/youtube" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Outlook"
-                                android:textAlignment="center"
+                                android:text="Youtube"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -616,14 +605,12 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="4.6★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:textSize="20sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/zalo"
+                            android:id="@+id/cgv"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="10dp"
@@ -632,25 +619,22 @@
                             <ImageButton
                                 android:layout_width="140dp"
                                 android:layout_height="160dp"
-                                android:background="@color/white"
+                                android:background="@color/FloralWhite"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/zalo" />
+                                android:src="@drawable/cgv" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Zalo"
-                                android:textAlignment="center"
+                                android:text="CGV"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="4.5★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:text="3.5★"
+                                android:textSize="20sp" />
 
                         </LinearLayout>
 
@@ -672,18 +656,15 @@
                             <TextView
                                 android:layout_width="140dp"
                                 android:layout_height="wrap_content"
-                                android:text="Zoom"
-                                android:textAlignment="center"
+                                android:text="Twitter"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="140dp"
                                 android:layout_height="wrap_content"
-                                android:text="4.8★"
-                                android:textAlignment="center"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:text="4.2★"
+                                android:textSize="20sp" />
 
                         </LinearLayout>
                     </TableRow>
